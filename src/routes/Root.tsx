@@ -1,9 +1,8 @@
-import * as React from "react";
-import CssBaseline from "@mui/material/CssBaseline";
-import PermanentDrawerLeft from "./components/navigation/PermanentDrawerLeft";
 import { Typography } from "@mui/material";
+import CssBaseline from "@mui/material/CssBaseline";
+import PermanentDrawerLeft from "../components/navigation/PermanentDrawerLeft";
 
-function App() {
+function Root() {
   return (
     <>
       <CssBaseline />
@@ -42,4 +41,4 @@ function App() {
   );
 }
 
-export default App;
+export default Root;
