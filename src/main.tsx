@@ -5,12 +5,14 @@ import "@fontsource/roboto/700.css";
 import React from "react";
 import ReactDOM from "react-dom/client";
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
-import Root from "./routes/Root.tsx";
+import { Root } from "./routes/Root.tsx";
+import { ErrorPage } from "./ErrorPage.tsx";
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <Root />,
+    errorElement: <ErrorPage />,
   },
 ]);
 

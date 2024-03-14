@@ -2,7 +2,7 @@ import { Typography } from "@mui/material";
 import CssBaseline from "@mui/material/CssBaseline";
 import PermanentDrawerLeft from "../components/navigation/PermanentDrawerLeft";
 
-function Root() {
+export function Root() {
   return (
     <>
       <CssBaseline />
@@ -40,5 +40,3 @@ function Root() {
     </>
   );
 }
-
-export default Root;
