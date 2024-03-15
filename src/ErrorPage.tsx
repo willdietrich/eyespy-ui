@@ -6,7 +6,7 @@ export function ErrorPage() {
   console.error(error);
 
   return (
-    <Box my={15} alignItems="center" justifyContent="center" display="flex">
+    <Box alignItems="center" justifyContent="center" display="flex" my={15}>
       <Box>
         <Typography variant="h1">Oops!</Typography>
         <Typography variant="body1" my={5}>

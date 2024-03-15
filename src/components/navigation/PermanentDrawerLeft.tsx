@@ -5,10 +5,10 @@ import Drawer from "@mui/material/Drawer";
 import List from "@mui/material/List";
 import ListItem from "@mui/material/ListItem";
 import ListItemButton from "@mui/material/ListItemButton";
-import ListItemText from "@mui/material/ListItemText";
 import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
 import { ReactNode } from "react";
+import { Link } from "react-router-dom";
 
 const drawerWidth = 240;
 
@@ -19,6 +19,19 @@ interface PermanentDrawerLeftProps {
 export default function PermanentDrawerLeft({
   children,
 }: PermanentDrawerLeftProps) {
+  const getPath = (label: string): string => {
+    switch (label) {
+      case "Home":
+        return "/";
+      case "Channels":
+        return "/channels";
+      case "Users":
+        return "/users";
+    }
+
+    return "/";
+  };
+
   return (
     <Box sx={{ display: "flex" }}>
       <AppBar
@@ -49,7 +62,7 @@ export default function PermanentDrawerLeft({
           {["Home", "Channels", "Users"].map((text) => (
             <ListItem key={text} disablePadding>
               <ListItemButton>
-                <ListItemText primary={text} />
+                <Link to={getPath(text)}>{text}</Link>
               </ListItemButton>
             </ListItem>
           ))}
